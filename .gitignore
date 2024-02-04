@@ -84,4 +84,6 @@ build/
 build-*/
 docgen_tmp/
 
+node_modules/
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,zig,linux
