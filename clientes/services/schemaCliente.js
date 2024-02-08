@@ -20,7 +20,7 @@ const clientesSchema=new Schema({
         require:true
     },
     telefono:{
-        type:String,
+        type:Number,
         trim:true,
         require:true
     },

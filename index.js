@@ -27,9 +27,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 // agregando la ruta
 app.use('/v1',router);
 
+app.use(boomErrorHandler);
 app.use(logError);
 app.use(errorHandler);
-app.use(boomErrorHandler);
 
 
 module.exports=app;

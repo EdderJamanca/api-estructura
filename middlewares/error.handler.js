@@ -5,7 +5,7 @@ const boom=require('@hapi/boom');
 
 const logError=(err,req,res,next)=>{
   console.error(err);
-  newt(err);
+  next(err);
 }
 
 
@@ -22,9 +22,10 @@ const boomErrorHandler=(err,req,res,next)=>{
    if(err.isBoom){
     const {output}=err;
     res.status(output.statusCode).json(output.payload);
+   }else{
+     next(err);
    }
 
-   next(err);
 
 }
 
