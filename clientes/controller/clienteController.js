@@ -19,7 +19,7 @@ const newCliente=async(req,res,next)=>{
     const {nombre,apellido,email,telefono,activo}=req.body;
 
     const existCliente= await MgetOneCliente(email);
-  console.log('existCliente',existCliente)
+
     if(existCliente.length>0){
       next(boom.badRequest("El Email ya se encuentra registrado"));
       return;

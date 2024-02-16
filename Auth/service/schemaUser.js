@@ -20,8 +20,7 @@ const userSchema=new Schema({
     },
     password:{
       type:String,
-      required:true,
-      select:false
+      required:true
     },
     roles:{
       type:String,
@@ -47,6 +46,10 @@ const userSchema=new Schema({
     fecha_creacion:{
       type:Date,
       default: Date.now
+  },
+  recoveryToken: {
+    type: String,
+    trim:true
   }
 
 })
